@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./templates/impala/css/rombus.min.css" />
+    <title>Rombus Globlal</title>
+    <link rel="shortcut icon" href="./imagenes/rombus0.png" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-12 col-sm-12 navbar navbar-expand navbar-expand-md navbar-light bg-light ka">
+                <div class="col-md-4 col-sm-6 collapse navbar-collapse" id="navbarSupportedContent">
+                    <img class="" src="./imagenes/rombusglobal.svg" style="width: 300px;height: 60px;" />
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-md-8 col-sm-6 collapse navbar-collapse px-0" id="navbarSupportedContent"
+                    style="padding-right: 8% !important;">
+                    <a class="nav-link px-3" href="#" style="margin-left: auto;">SOLUCIONES</a>
+                    <a class="nav-link px-3" href="#">STAFF</a>
+                    <a class="nav-link px-3" href="#">BLOG</a>
+                    <button class="btnmovil" style="width:38px; display: none;"><img src="./imagenes/open-menu.svg"
+                            style="width:30px;" /></button>
+                    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" /> -->
+                    <button class="btn btn2 btn-outline-success rounded-pill my-2 my-sm-0 py-2" type="submit">PUBLICAR
+                        PROYECTO</button>
+                    <img class="imagenperfil" src="imagenes/capa-avatar.png"
+                        class="rounded d-flex rounded-circle imgperfil ml-4" alt="..." />
+                </div>
+            </nav>
+        </div>
+
+        <!------Pantalla 1: Definicion------>
+        <div id="pantalla_1" class="d-block" name="pantalla">
+            <div class="col-md-12 col-sm-12 d-flex infor_central mb-5" style="padding-right: 8%">
+                <div class="col-md-4 col-sm-12 px-0">
+                    <div class="infor-paso d-flex align-items-baseline pl-5">
+                        <p>1/4</p>
+                        <span class="span1 ml-2">DEFINIICION</span>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12 px-0">
+                    <div class="infor-paso0">
+                        <h5 class="m-0">Cuéntanos de qué trata su proyecto </h5></br>
+                        <span>¡Explica brevemente en qué consiste tu necesidad y en 4 pasos tendrás un plan a
+                            tu
+                            medida!
+                        </span></br>
+                        <label>Ponle un titulo fácil, que identifique tu requerimiento* </label></br>
+                        <input type="text" class="form-control rounded-0" placeholder="Titulo del proyecto(Ej:...)">
+                        <label>Agrega un párrafo que nos ayuden a entender lo que necesitas o el objetivo que deseas
+                            lograr*
+                        </label></br>
+                        <textarea name="comentario" id="comentario_txt" rows="10" placeholder="Descripción del proyecto"
+                            required="" style="width: 100%;"></textarea>
+                        <label>*obligatorio</label></br>
+                        <button onclick="mostrarPantallas2()" class="btn btn2 float-right rounded-0" type="submit"
+                            style="padding: 5px 55px;font-size:19px;">
+                            Continuar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!------Panatalla 2: Especialidad------>
+        <div id="pantalla_2" class="d-none" name="pantalla">
+            <div class="col-md-12 col-sm-12 d-flex infor_central mb-5" style="padding-right: 8%">
+                <div class="col-md-4 px-0">
+                    <div class="infor-paso d-flex align-items-baseline pl-5">
+                        <p>2/4</p>
+                        <span class="span1 ml-2">ESPECIALIDAD</span>
+                    </div>
+                </div>
+                <div class="col-md-8 px-0">
+                    <div class="infor-paso0">
+                        <h5 class="m-0">Selecciona el área profesional adecuada </h5></br>
+                        <span>Elige el servicio que enfoca tu necesidad principal:
+                        </span></br>
+                        <label>Marca dentro del área elegida, la categoría y subcategoría que correspondan*:
+                        </label></br>
+                        <div class="d-flex align-items-center elegircategoria" style="height: 200px;">
+                            <button class="btn0 rounded-0 border border-dark botonespecial1"
+                                onclick="mostrarSubcate1()">
+                                <img src="./imagenes/prismaticos.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Estrategia y
+                                    Marketing
+                                </span>
+                            </button>
+                            <button class="btn0 rounded-0 border border-dark botonespecial2"
+                                onclick="mostrarSubcate2()">
+                                <img src="./imagenes/eye.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Diseño y Creatividad</span>
+                            </button>
+                            <button class="btn0 rounded-0 border border-dark botonespecial3"
+                                onclick="mostrarSubcate3()">
+                                <img src="./imagenes/thumbs-up.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Publicidad y Campañas</span>
+                            </button>
+                            <button class="btn0 rounded-0 border border-dark m-0 botonespecial4"
+                                onclick="mostrarSubcate4()">
+                                <img src="./imagenes/code-slash-outline.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Programación y Tecnología</span>
+                            </button>
+                        </div>
+
+                        <div id="subcate1" class="col-md-12 px-0 d-none subcate" name="marcar_subcategoria">
+                            <label>Marca la categoría y subcategoría que correspondann*:</label></br>
+                            <div id="subpantallas" class="col-md-12 p-0 bg-white" name="subpantalla">
+                                <div
+                                    class="col-md-7 btn-group dropright w-100 d-flex flex-column border-right p-0 listado">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Desarrollo de Negocio Digital
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Diseño Web
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Marca e Imagen Corporativa / Branding
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Estrategia de Contenidos y Comunicación
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Marketing de Social Media
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Reputación on line
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Estrategia de Crecimiento (Growth Hacking)
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Estrategia de Experiencia de Consumidor
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Generación de Prospectos (Leads)
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Gestión de Campaña Digital
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Optimización en Buscadores (SEO)
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Marketing en Buscadores (SEM)
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Estrategia de Ventas on line
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Relaciones Públicas
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Marketing de Influencers
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Investigación y Análisis de Mercado
+                                    </button>
+                                    <div class="dropdown-menu subcategoriaa">
+                                        <a class="dropdown-item" href="#">Marca Líder</a>
+                                        <a class="dropdown-item" href="#">Empresa Grande</a>
+                                        <a class="dropdown-item" href="#">PyME</a>
+                                        <a class="dropdown-item" href="#">Micro Empresa / Emprendimiento</a>
+                                        <a class="dropdown-item" href="#">Institución / ONG</a>
+                                        <!-- Dropdown menu links -->
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-2"></div> -->
+                            </div>
+
+                            <label class="label1">Si lo deseas, puedes agregar hasta 5 habilidades que consideres
+                                necesarias.</label></br>
+                            <div class="input-group mb-3">
+                                <div class="col-md-11 d-flex p-0 mb-4" style="width: 85%;">
+                                    <input type="text" class="form-control" placeholder="Autocomplete"
+                                        aria-label="Recipient's username" aria-describedby="button-addon2"
+                                        style="width: 80%;">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary p-0 px-1" type="button"
+                                            id="button-addon2"
+                                            style="background-color: #666666; font-size: 12px;">AGREGAR
+                                            +</button>
+                                    </div>
+                                </div>
+                                <div class="position-relative agregarsub mr-5">
+                                    <button type="button" class="ml-3 mb-1 close rounded-circle" data-dismiss="toast"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <label>Diseño de interfaz de usuario</label>
+                                    <img class="flecha m-0" src="./imagenes/play-button.svg" />
+                                </div>
+                                <div class=" position-relative agregarsub mr-5 ml-2">
+                                    <button type="button" class="ml-3 mb-1 close rounded-circle data-dismiss=" toast"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <label>Ilustración</label>
+                                    <img class="flecha m-0" src="./imagenes/play-button.svg" />
+                                </div>
+                                <div class=" position-relative agregarsub mr-5 ml-2">
+                                    <button type="button" class="ml-3 mb-1 close rounded-circle" data-dismiss="toast"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <label>Adobe Photoshop</label>
+                                    <img class="flecha m-0" src="./imagenes/play-button.svg" />
+                                </div>
+                                <div class=" position-relative agregarsub ml-2">
+                                    <button type="button" class="ml-3 mb-1 close rounded-circle" data-dismiss="toast"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <label>Adobe After Effects</label>
+                                    <img class="flecha m-0" src="./imagenes/play-button.svg" />
+                                </div>
+                            </div>
+                            <div class="bg-infoo clearfix">
+                                <!-- <a class="dropdown-item" href="#">Link 1</a> -->
+                                <a class="float-left py-1 border-0" href="rombusglobal.html"
+                                    style="font-size:19px;color: #00a2c2 !important;">
+                                    < volver </a>
+                                        <button class="btn btn2 float-right rounded-0" type="submit"
+                                            style="padding: 5px 55px;font-size:19px;" onclick="mostrarPantallas3()">
+                                            Continuar
+                                        </button>
+                            </div>
+                        </div>
+                        <div id="subcate2" class="col-md-12 px-0 d-none subcate" name="marcar_subcategoria">
+                            <label>Marca la categoría y subcategoría que correspondan*:</label></br>
+                            <div id="subpantallas" class="col-md-12 p-0 bg-white" name="subpantalla">
+                                <div
+                                    class="col-md-7 btn-group dropright w-100 d-flex flex-column border-right p-0 listado">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Creación de Marca e Identidad Corporativa
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Diseño Web
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Diseño de Aplicación
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Diseño UX: Experiencia de Usuario
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Diseño Gráfico
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Diseño Editorial
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Diseño Industrial
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Diseño de Indumentaria y Moda
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Redacción
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Traducción a idiomas
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Fotografía
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Ilustraciones
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Animaciones
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Video
+                                    </button>
+
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Audio y Sonido
+                                    </button>
+                                    <div class="dropdown-menu subcategoriaa">
+                                        <button class="dropdown-item" href="#">Android</button>
+                                        <button class="dropdown-item" href="#">IOS</button>
+                                        <button class="dropdown-item" href="#">Desktop</button>
+                                        <!-- Dropdown menu links -->
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-2"></div> -->
+                            </div>
+
+                            <label class="label1">Si lo deseas, puedes agregar hasta 5 habilidades que consideres
+                                necesarias.</label></br>
+                            <div class="input-group mb-3" style="width: 80%;">
+                                <input type="text" class="form-control" placeholder="Autocomplete"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                                        style="background-color: #666666;">AGREGAR
+                                        +</button>
+                                </div>
+                            </div>
+                            <div class="bg-infoo clearfix">
+                                <!-- <a class="dropdown-item" href="#">Link 1</a> -->
+                                <a class="float-left py-1 border-0" href="rombusglobal.html"
+                                    style="font-size:19px;color: #00a2c2 !important;">
+                                    < volver </a>
+                                        <button class="btn btn2 float-right rounded-0" type="submit"
+                                            style="padding: 5px 55px;font-size:19px;" onclick="mostrarPantallas3()">
+                                            Continuar
+                                        </button>
+                            </div>
+                        </div>
+                        <div id="subcate3" class="col-md-12 px-0 d-none subcate" name="marcar_subcategoria">
+                            <label>Marca la categoría y subcategoría que correspondan*:</label></br>
+                            <div id="subpantallas" class="col-md-12 p-0 bg-white" name="subpantalla">
+                                <div
+                                    class="col-md-7 btn-group dropright w-100 d-flex flex-column border-right p-0 listado">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Creatividad Publicitaria
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Planificacion de Medios
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Publicidad Digital
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Gestion de Campaña Publicitaria
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Publicidad en Redes Sociales (Social Ads)
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Publicidad BTL
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Eventos
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Prensa
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Estrategia multiformato 360
+                                    </button>
+                                    <div class="dropdown-menu subcategoriaa">
+                                        <button class="dropdown-item" href="#">Pay Per Click (PPC)</button>
+                                        <button class="dropdown-item" href="#">Otra</button>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-2"></div> -->
+                            </div>
+
+                            <label class="label1">Si lo deseas, puedes agregar hasta 5 habilidades que consideres
+                                necesarias.</label></br>
+                            <div class="input-group mb-3" style="width: 80%;">
+                                <input type="text" class="form-control" placeholder="Autocomplete"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                                        style="background-color: #666666;">AGREGAR
+                                        +</button>
+                                </div>
+                            </div>
+                            <div class="bg-infoo clearfix">
+                                <!-- <a class="dropdown-item" href="#">Link 1</a> -->
+                                <a class="float-left py-1 border-0" href="rombusglobal.html"
+                                    style="font-size:19px;color: #00a2c2 !important;">
+                                    < volver </a>
+                                        <button class="btn btn2 float-right rounded-0" type="submit"
+                                            style="padding: 5px 55px;font-size:19px;" onclick="mostrarPantallas3()">
+                                            Continuar
+                                        </button>
+                            </div>
+                        </div>
+                        <div id="subcate4" class="col-md-12 px-0 d-none subcate" name="marcar_subcategoria">
+                            <label>Marca la categoría y subcategoría que correspondan*:</label></br>
+                            <div id="subpantallas" class="col-md-12 p-0 bg-white" name="subpantalla">
+                                <div
+                                    class="col-md-7 btn-group dropright w-100 d-flex flex-column border-right p-0 listado">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Interfaz de Usuario - Diseño UI / Front-End
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Programación Web
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Plataforma de Gestión de Contenidos (CMS)
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Desarrollo de Aplicaciones
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Integración con API’s
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Comercio Electrónico
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Juegos
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Control de Calidad
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Sistemas
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Redes
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Seguridad Informática
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Inteligencia de Negocios / BI (Business Intelligence)
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle rounded-0"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Soporte
+                                    </button>
+                                    <div class="dropdown-menu subcategoriaa">
+                                        <button class="dropdown-item" href="#">Website</button>
+                                        <button class="dropdown-item" href="#">Landing Page</button>
+                                        <button class="dropdown-item" href="#">Blog</button>
+                                        <button class="dropdown-item" href="#">Mail</button>
+                                        <button class="dropdown-item" href="#">Arreglo de website (bug)</button>
+                                        <button class="dropdown-item" href="#">Otro</button>
+                                        <!-- Dropdown menu links -->
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-2"></div> -->
+                            </div>
+
+                            <label class="label1">Si lo deseas, puedes agregar hasta 5 habilidades que consideres
+                                necesarias.</label></br>
+                            <div class="input-group mb-3" style="width: 80%;">
+                                <input type="text" class="form-control" placeholder="Autocomplete"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                                        style="background-color: #666666;">AGREGAR
+                                        +</button>
+                                </div>
+                            </div>
+                            <div class="bg-infoo clearfix">
+                                <!-- <a class="dropdown-item" href="#">Link 1</a> -->
+                                <a class="float-left py-1 border-0" href="rombusglobal.html"
+                                    style="font-size:19px;color: #00a2c2 !important;">
+                                    < volver </a>
+                                        <button class="btn btn2 float-right rounded-0" type="submit"
+                                            style="padding: 5px 55px;font-size:19px;" onclick="mostrarPantallas3()">
+                                            Continuar
+                                        </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-----Pantalla 3: datos adicionales------>
+        <div id="pantalla_3" class="d-none" name="pantalla">
+            <div class="col-md-12 col-sm-12 d-flex my-5 infor_central mb-5" style="padding-right: 8%;">
+                <div class="col-md-4 px-0">
+                    <div class="infor-paso d-flex align-items-baseline pl-5">
+                        <p>3/4</p>
+                        <span class="span1 ml-2">DATOS ADICIONALES</span>
+                    </div>
+                </div>
+                <div class="col-md-8 px-0">
+                    <div class="">
+                        <h5 class="m-0">Agregar información valiosa</h5></br>
+                        <span>Puedes adjuntar un archivo o imagen que describa tu proyecto o un ejemplo de
+                            referencia.</span></br>
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                        <span>Tu comentario (ideas, pedidos, ejemplos, webs, paleta de colores, marcas preferidas,
+                            versiones
+                            previas, etc.):</span>
+                        <textarea class="form-control rounded-0" id="exampleFormControlTextarea1"
+                            placeholder="Descripcion del proyecto" rows="7">
+                        </textarea>
+                        <div class="clearfix mt-3">
+                            <a class="float-left py-1 border-0" href="rombusglobal.html"
+                                style="font-size:19px;color: #00a2c2 !important;">
+                                < volver </a>
+                                    <button class="btn btn2 float-right rounded-0" type="submit"
+                                        style="padding: 5px 55px;font-size:19px;" onclick="mostrarPantallas4()">
+                                        Continuar
+                                    </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------pantalla 4 : Tipo de prestacion------>
+        <div id="pantalla_4" class="d-none" name="pantalla">
+            <div class="col-md-12 col-sm-12 d-flex infor_central border-top mb-5 " style="padding-right: 8%;">
+                <div class="col-md-4 px-0">
+                    <div class="infor-paso d-flex align-items-baseline pl-5">
+                        <p>4/4</p>
+                        <span class="span1 ml-2">TIPO DE PRESTACIÓN</span>
+                    </div>
+                </div>
+                <div class="col-md-8 px-0">
+                    <div class="infor-paso0">
+                        <h5 class="m-0">Define la modalidad de atención profesional </h5></br>
+                        <span>Elige con quién quieres resolver el trabajo:
+                        </span></br>
+                        <div class="d-flex align-items-center btn-resolver-work my-4" style="height: 200px;">
+                            <button class="btn0 rounded-0 border border-dark botonespecial5">
+                                <img src="./imagenes/user.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Un profesional individual
+                                </span>
+                            </button>
+                            <button class="btn0 rounded-0 border border-dark botonespecial5">
+                                <img src="./imagenes/group.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Project manager
+                                    y equipo</span>
+                            </button>
+                            <button class="btn0 rounded-0 border border-dark botonespecial5">
+                                <img src="./imagenes/gps.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Rombus Ciudad /
+                                    cercana a mi ubicación</span>
+                            </button>
+                            <button class="btn0 rounded-0 border border-dark m-0 botonespecial5">
+                                <img src="./imagenes/apartment.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Rombus Central /
+                                    atención corporativa</span>
+                            </button>
+                        </div>
+                        <span style="font-size: 14px;">Selecciona el nivel de experiencia</span></br>
+                        <div class="selectexperiencia" style="width: 40%;font-size: 11.5px; margin: 10px 0;">
+                            <label style="margin: 0;">Inicial » talentos que transitan sus primeros años.</label>
+                            <label style="margin: 0;">Medio » ya cuentan con experiencia comprobable</label>
+                            <label style="margin: 0;">Experto » poseen total dominio en la materia.</label>
+                        </div>
+                        <div class="my-3 experiencia d-flex position-relative">
+                            <div class="exper" style="left: 0;"><span>Inicial</br>$</span></div>
+                            <div class="exper" style="left: 0;right:0;margin: auto;"><span>Medio</br>$$</span></div>
+                            <div class="exper" style="right: 0;"><span>Experto</br>$$$</span></div>
+                        </div>
+                        <span style="font-size: 14px;">Tipo de proyecto:</span></br>
+                        <div class="my-3 experiencia d-flex position-relative">
+                            <button class="btn0 rounded-0 border border-dark botonespecial5 m-0"
+                                style="left: 0;width: 250px;">
+                                <img src="./imagenes/paper.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Proyecto único,</br>
+                                    empieza y termina una sola vez</span>
+                            </button>
+                            <button class="btn0 rounded-0 border border-dark botonespecial5 m-0"
+                                style="left: 0;right:0;margin: auto !important;width: 250px">
+                                <img src="./imagenes/calendar.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Proyecto recurrente,<br>
+                                    se repite según plazo estimado</span>
+                            </button>
+                            <button class="btn0 rounded-0 border border-dark botonespecial5 m-0"
+                                style="right: 0;width: 250px">
+                                <img src="./imagenes/help.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">No lo sé aún,</br>
+                                    lo definiré luego</span>
+                            </button>
+                        </div>
+                        <h5 class="m-0">Plazo estimado: </h5></br>
+                        <span>Indica el tiempo aproximado en el que necesitarás que se repita tu proyecto. Luego
+                            podrás
+                            precisarlo o revisarlo con mayor exactitud.
+                        </span>
+                        <div class="my-3 experiencia d-flex position-relative">
+                            <div class="exper py-3" style="left: 0;"><span>1 a 7días</span></div>
+                            <div class="exper py-3" style="left: 0;right:0;margin: auto;"><span>8 a 30 días</span>
+                            </div>
+                            <div class="exper py-3" style="right: 0;"><span>Mas de 30 días</span></div>
+                        </div>
+                        <label></label>
+                        <div class="form-group" style="width:33.3%;margin-left: auto;">
+                            <label for="formGroupExampleInput">Rango de precios sugerido</label>
+                            <section class="d-flex">
+                                <button type="button" data-toggle="tooltip" data-html="true"
+                                    title="Si colocas un valor dentro del rango de precio sugerido,  aumentarás la cantidad y calidad de las propuestas."
+                                    style="margin-right: 1px;border: none;border-radius: 50%;">
+                                    <img src="./imagenes/help.svg" style="width:15px;">
+                                </button>
+                                <input class="form-control" type="text" placeholder="$1000/2.000" readonly />
+                            </section>
+                        </div>
+                        <div class="form-group" style="width:30%;margin-left: auto;">
+                            <label for="formGroupExampleInput">Tu presupuesto</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="$1500"
+                                readonly />
+                        </div>
+                        <div class="col-md-12 w-100 d-flex px-0 atencion-localizada"
+                            style="width: 40%;font-size: 11.5px;">
+                            <div class="col-md-6">
+                                <h5>Atencion localizada</h5>
+                                <label style="margin: 0;">Un Profesional de Rombus, cercano en tu localidad, se
+                                    contactará
+                                    para atender y gestionar personalmente las necesidades del proyecto.</label>
+                            </div>
+                            <div class="col-md-6 px-0 my-3">
+                                <form class="needs-validation" novalidate>
+                                    <div class="form-row formatencion">
+                                        <div class="col-md-6 mb-1">
+                                            <input type="text" class="form-control" id="validationCustom01"
+                                                placeholder="juan carlos" required>
+                                        </div>
+                                        <div class="col-md-6 mb-1">
+                                            <input type="text" class="form-control" id="validationCustom02"
+                                                placeholder="pepe" required>
+                                        </div>
+                                        <div class="col-md-6 mb-1">
+                                            <input type="email" class="form-control" id="inputEmail4"
+                                                placeholder="juanpepe@empresa.com">
+                                        </div>
+                                        <div class="col-md-6 mb-1">
+                                            <input type="text" class="form-control" id="validationCustom01"
+                                                placeholder="Whatsappp" required>
+                                        </div>
+                                        <div class="form-group col-md-6 mb-1">
+                                            <input type="text" class="form-control" id="inputCity" placeholder="Ciudad">
+                                        </div>
+                                        <div class="col-md-6 mb-1">
+                                            <select class="custom-select p-0" id="validationCustom04"
+                                                style="height: auto;" required>
+                                                <option selected disabled aria-placeholder="">pais</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class=" col-md-12 bg-infoo clearfix">
+                            <!-- <a class="dropdown-item" href="#">Link 1</a> -->
+                            <a class="float-left py-1 border-0" href="#"
+                                style="font-size:19px;color: #00a2c2 !important;">
+                                < volver </a>
+                                    <button class="btn btn2 btnterminado float-right rounded-0" type="submit"
+                                        style="padding: 5px 25px;font-size:19px;" onclick="mostrarPantallas5()">
+                                        ¡Terminado! Ir a resumen
+                                    </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!------pantalla 5: resumen de todo-->
+        <div id="pantalla_5" class="d-none" name="pantalla">
+            <div class="col-md-12 col-sm-12 my-5 border-top infor_central mb-5" style="padding-right: 8%;">
+                <div class="col-md-12 d-flex justify-content-end my-5 w-100">
+                    <div class="col-md-4 ml-auto">
+                        <h5>Resumen del proyecto</h5>
+                    </div>
+                    <div class="col-md-4 ">
+                        <button class="btn btn3 rounded-0">enviar</button>
+                    </div>
+                </div>
+                <div class="col-md-12 d-flex my-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="infor-paso pt-0 d-flex align-items-baseline pl-5">
+                                <p>1</p>
+                                <span class="span1 ml-2">DEFINIICION</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8 border bg-white shadow-lg p-0">
+                            <div class="py-2 pl-3">
+                                <span class="" style="font-weight: 800;">Va título Modelo 3D de un tanque o
+                                    fusil</span>
+                            </div>
+                            <div class="py-2 pl-3 border-top">
+                                <label>Va definición El objetivo de lograr empresas verdes trata de un cambio
+                                    cultural,
+                                    una
+                                    toma
+                                    de conciencia
+                                    que como de conciencia que como ciudadanos. RombusDATA Blog: El objetiv</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-3">
+                            <div class="infor-paso pt-0 d-flex align-items-baseline pl-5">
+                                <p>2</p>
+                                <span class="span1 ml-2">ESPECIALIDAD</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8 my-1 border bg-white shadow-lg p-0 resuespecialidad">
+                            <div class="py-2 pl-3">
+                                <span class="text-white">DISEÑO Y CREATIVIDAD</span>
+                            </div>
+                            <div class="py-2 pl-3 border-top">
+                                <span class="text-white">DISEÑO DE APLICACIÓN / IOS</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-1">
+                            <div class="infor-paso pt-0 d-flex align-items-baseline pl-5">
+                                <p>3</p>
+                                <span class="span1 ml-2">ADICIONALES</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8 my-1 p-0">
+                            <div class="py-2 pl-3 border-top bg-white border shadow-lg ">
+                                <label>Va definición El objetivo de lograr empresas verdes trata de
+                                    un cambio cultural, una
+                                    toma
+                                    de conciencia
+                                    que como de conciencia que como ciudadanos. RombusDATA Blog: El objetiv</label>
+                            </div>
+                            <span style="font-size: 12px;">Archivo adjunto:xxx</span>
+                        </div>
+                        <div class="col-md-4 my-2">
+                            <div class="infor-paso pt-0 d-flex align-items-baseline pl-5">
+                                <p>4</p>
+                                <span class="span1 ml-2">CONDICIÓN</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8 d-flex p-0 my-2 condicionresumen">
+                            <div class="col-md-5 p-0 mr-auto">
+                                <button class=" btn0 rounded-0 border border-dark botonespecial5 py-5 w-100"
+                                    style="height: 100%;">
+                                    <img src="./imagenes/user.svg" style="width: 20px;" /></br>
+                                    <span class="especialidad2">Un profesional individual
+                                    </span>
+                                </button>
+                                <!-- <img src="./imagenes/apartment.svg" style="width: 20px;" /></br>
+                                <span class="especialidad2">Rombus Central /
+                                    atención corporativa</span> -->
+                            </div>
+                            <div class="col-md-5 p-0" style="width:95px">
+                                <button class="btn0 rounded-0 border border-dark botonespecial5 m-0 py-5"
+                                    style="width: 100%">
+                                    <img src="./imagenes/calendar.svg" style="width: 20px;" /></br>
+                                    <span class="especialidad2">Proyecto recurrente,<br>
+                                        plazo estimado: 8 a 31 días</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-8 ml-auto" style="margin-left: auto;">
+                            <div class="form-group" style="width:30%;margin-left: auto;">
+                                <label for="formGroupExampleInput">Tu presupuesto</label>
+                                <input type="text" class="form-control" placeholder="$1500" readonly />
+                            </div>
+                        </div>
+                        <div class="col-md-8 ml-auto p-0 btnresumen position-relative">
+                            <button class="btn rounded-0 py-3 mr-auto" type="button" id="button-addon2"
+                                style="background-color: #666666;width: 30%;">Guardar borrador
+                            </button>
+                            <button class="btn rounded-0 py-3" type="button"
+                                style="background-color: #0a111a;width: 30%;">Cerrar proyecto</button>
+                            <button class=" btn rounded-0 py-3 float-right" type="button"
+                                style="background-color: #f39a18;width: 30%;">!enviar¡</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./js/rombus.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
